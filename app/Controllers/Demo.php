@@ -14,7 +14,7 @@ class Demo extends BaseController
         $jaxon = jaxon()->app();
 
         // Print the page
-        echo view('demo/index', [
+        return view('demo/index', [
             'jaxonCss' => $jaxon->css(),
             'jaxonJs' => $jaxon->js(),
             'jaxonScript' => $jaxon->script(),
