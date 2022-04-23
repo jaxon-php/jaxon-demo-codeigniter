@@ -10,7 +10,7 @@ class Jaxon extends BaseConfig
 {
     public $app = [
         'directories' => [
-            APPPATH . '/jaxon/ajax' => [
+            APPPATH . '../jaxon/ajax' => [
                 'namespace' => '\\Jaxon\\Demo\\Ajax',
                 // 'separator' => '', // '.' or '_'
                 // 'protected.' => [],
@@ -31,7 +31,7 @@ class Jaxon extends BaseConfig
             'language' => 'en',
             'encoding' => 'UTF-8',
             'request' => [
-                'uri' => 'jaxon/process',
+                'uri' => 'jaxon',
             ],
             'prefix' => [
                 'class' => '',
@@ -54,6 +54,25 @@ class Jaxon extends BaseConfig
                 'export' => false,
                 'minify' => false,
                 'options' => '',
+            ],
+        ],
+        'dialogs' => [
+            'libraries' => ['pgwjs'],
+            'default' => [
+                'modal' => 'bootstrap',
+                'message' => 'toastr',
+                'question' => 'bootstrap',
+            ],
+            'toastr' => [
+                'options' => [
+                    'closeButton' => true,
+                    'positionClass' => 'toast-top-center'
+                ],
+            ],
+            'assets' => [
+                'include' => [
+                    'all' => true,
+                ],
             ],
         ],
     ];

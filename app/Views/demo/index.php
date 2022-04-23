@@ -1,8 +1,8 @@
-<?php require(__DIR__ . '/includes/header.php') ?>
+<?php echo view('demo/includes/header.php') ?>
 
     <div class="container-fluid">
         <div class="row" style="margin-top:30px;">
-<?php require(__DIR__ . '/includes/nav.php') ?>
+<?php echo view('demo/includes/nav.php') ?>
             <div class="col-sm-9 content">
                 <h3 class="page-header"><?php echo $pageTitle ?></h3>
 
@@ -47,21 +47,19 @@
             </div> <!-- class="content" -->
        </div> <!-- class="row" -->
     </div>
-<div id="jaxon-init">
 <script type='text/javascript'>
     /* <![CDATA[ */
     window.onload = function() {
         // call the helloWorld function to populate the div on load
-    	<?php echo $pgw->sayHello(0, false) ?>;
+    	<?php echo $pgw->sayHello(0) ?>;
         // call the setColor function on load
-        <?php echo $pgw->setColor(pm()->select('colorselect1'), false) ?>;
+        <?php echo $pgw->setColor(pm()->select('colorselect1')) ?>;
         // Call the HelloWorld class to populate the 2nd div
-        <?php echo $bts->sayHello(0, false) ?>;
+        <?php echo $bts->sayHello(0) ?>;
         // call the HelloWorld->setColor() method on load
-        <?php echo $bts->setColor(pm()->select('colorselect2'), false) ?>;
+        <?php echo $bts->setColor(pm()->select('colorselect2')) ?>;
     }
     /* ]]> */
 </script>
-</div>
 
-<?php require(__DIR__ . '/includes/footer.php') ?>
+<?php echo view('demo/includes/footer.php', compact('JaxonCss', 'JaxonJs', 'JaxonScript')) ?>

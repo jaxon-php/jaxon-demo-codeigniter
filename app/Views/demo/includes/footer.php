@@ -4,11 +4,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-<div id="jaxon-code">
 <?php
 echo $jaxonJs, "\n", $jaxonScript, "\n", $jaxonCss, "\n";
 ?>
-</div>
 
 </body>
 </html>
