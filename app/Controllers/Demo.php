@@ -6,6 +6,8 @@ use Jaxon\Demo\Ajax\Bts;
 use Jaxon\Demo\Ajax\Pgw;
 
 use function view;
+use function Jaxon\jaxon;
+use function Jaxon\pm;
 
 class Demo extends BaseController
 {
@@ -23,6 +25,8 @@ class Demo extends BaseController
             'bts' => $jaxon->request(Bts::class),
             // Jaxon request to the Pgw Jaxon class
             'pgw' => $jaxon->request(Pgw::class),
+            // Jaxon Parameter Factory
+            'pm' => pm(),
         ]);
     }
 
